@@ -2558,7 +2558,7 @@ function webform_client_form($form, &$form_state, $node, $submission = FALSE, $r
       // If this is the first time this draft has been restore and presented to
       // the user, let them know that they are looking at a draft, rather than
       // a new form. This applies to the node view page, but not to a submission
-      // edit page (where they presummably know what submission they are
+      // edit page (where they presumably know what submission they are
       // editing).
       if ($resume_draft && empty($form_state['input'])) {
         backdrop_set_message(t('A partially-completed form was found. Please complete the remaining portions.'));
