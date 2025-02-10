@@ -1416,6 +1416,34 @@ function webform_webform_submission_render_alter(&$renderable) {
 }
 
 /**
+ * Implements hook_webform_token_modifiers_info().
+ */
+function webform_webform_token_modifiers_info() {
+  return array(
+    array(
+      'type' => 'all',
+      'modifier' => 'label',
+      'callback' => 'webform_token_modifier_defaults',
+    ),
+    array(
+      'type' => 'all',
+      'modifier' => 'withlabel',
+      'callback' => 'webform_token_modifier_defaults',
+    ),
+    array(
+      'type' => 'all',
+      'modifier' => 'nolabel',
+      'callback' => 'webform_token_modifier_defaults',
+    ),
+    array(
+      'type' => 'select',
+      'modifier' => 'key',
+      'callback' => 'webform_token_modifier_defaults',
+    ),
+  );
+}
+
+/**
  * Implements hook_file_download().
  *
  * Only allow users with view webform submissions to download files.
